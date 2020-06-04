@@ -15,10 +15,11 @@ $(document).ready(function() {
 // Back-End, Business Logic
 function makeQuote(gender, age) {
   let quote = (100 - age) * 3;
-    if(gender === 'male' && age < 26) {
+    if(gender === 'male' || age < 26) {
       quote +=50;
+    } else {
+      alert('Please enter your age.');
     }
-    console.log(quote)
   // quote = calculateQuote(quote, gender, age);
   return quote;
 }
